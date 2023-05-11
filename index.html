@@ -11,8 +11,31 @@
 </head>
 
 <body>
-
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Plot</th>
+            <th>rating</th>
+            <th>year</th>
+            <th>cast</th>
+            <th>runtime</th>
+        </tr>
+        <tr>
+            <td> {{Object.keys(movieData)}}</td>
+            <td>{{movieData.plot}}</td>
+            <td>Cell D</td>
+            <td>Cell D</td>
+            <td>Cell D</td>
+            <td>Cell D</td>
+          </tr>
+    </table>
+    <p id="demo"></p>
     <script src="my-script.js"></script>
+    <script>
+        document.getElementById("demo").innerHTML = display();
+    </script>
+
+
 </body>
 <footer>
     <div>Created by: Zukhra</div>

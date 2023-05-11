@@ -33,3 +33,12 @@ let movieData = {
       cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
     },
   };
+
+  function display() {
+    for (const title in movieData) {
+        const titleObj = movieData[title];
+        console.log(title);
+        console.log(titleObj);
+        console.log(titleObj.plot);
+    }
+}
