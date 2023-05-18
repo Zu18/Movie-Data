@@ -15,7 +15,7 @@
     <p>Sort by:<button onclick="sortTable()">Sort</button></p>
 
     <h2>HTML Form</h2>
-    <form>
+    <form id="movie">
         <label for="title">Title:</label><br>
         <input type="text" id="title" name="title"><br>
         <label for="plot">Plot:</label><br>
@@ -42,6 +42,9 @@
     </table>
     <script type="text/javascript" src="my-script.js"></script>
     <script>
+        function ResetForm() {
+            document.getElementById("movie").reset();
+        }
         function addData() {
             var table = document.getElementById("myTable"); // Get the table element in which you want to add row
             var row = table.insertRow(1); // Create an empty <tr> element and add it to the 2nd position of the table: 
@@ -58,6 +61,7 @@
             cell4.innerHTML = document.getElementById("year").value;
             cell5.innerHTML = document.getElementById("cast").value;
             cell6.innerHTML = document.getElementById("runtime").value;
+            ResetForm();
         }
     </script>
 </body>
