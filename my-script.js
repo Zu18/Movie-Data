@@ -38,21 +38,21 @@ let movieData = {
 function displayMoviesTable() {
   var table = document.getElementById("myTable"); // Get the table element in which you want to add row
   for (const title in movieData) {
-      const titleObj = movieData[title];
-      var row = table.insertRow(1); // Create an empty <tr> element and add it to the 2nd position of the table: 
-      var cell1 = row.insertCell(0); // Insert new cells (<td> elements) at the 1st position :
-      var cell2 = row.insertCell(1); 
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
-      var cell6 = row.insertCell(5);
-      // Add data to the new cells:
-      cell1.innerHTML = title;
-      cell2.innerHTML = titleObj.plot;
-      cell3.innerHTML = titleObj.rating;
-      cell4.innerHTML = titleObj.year;
-      cell5.innerHTML = titleObj.cast;
-      cell6.innerHTML = titleObj.runtime;
+    const titleObj = movieData[title];
+    var row = table.insertRow(1); // Create an empty <tr> element and add it to the 2nd position of the table: 
+    var cell1 = row.insertCell(0); // Insert new cells (<td> elements) at the 1st position :
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    var cell6 = row.insertCell(5);
+    // Add data to the new cells:
+    cell1.innerHTML = title;
+    cell2.innerHTML = titleObj.plot;
+    cell3.innerHTML = titleObj.rating;
+    cell4.innerHTML = titleObj.year;
+    cell5.innerHTML = titleObj.cast;
+    cell6.innerHTML = titleObj.runtime;
   }
 }
 window.onload = displayMoviesTable();
@@ -64,32 +64,32 @@ function sortTable() {
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
-      //start by saying: no switching is done:
-      switching = false;
-      rows = table.rows;
-      /*Loop through all table rows (except the
-      first, which contains table headers):*/
-      for (i = 1; i < (rows.length - 1); i++) {
-          //start by saying there should be no switching:
-          shouldSwitch = false;
-          /*Get the two elements you want to compare,
-          one from current row and one from the next:*/
-          x = rows[i].getElementsByTagName("TD")[0];
-          y = rows[i + 1].getElementsByTagName("TD")[0];
-          //check if the two rows should switch place:
-          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-              //if so, mark as a switch and break the loop:
-              shouldSwitch = true;
-              break;
-          }
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      //check if the two rows should switch place:
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        //if so, mark as a switch and break the loop:
+        shouldSwitch = true;
+        break;
       }
-      if (shouldSwitch) {
-          /*If a switch has been marked, make the switch
-          and mark that a switch has been done:*/
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
   }
 }
-
+console.log(Object.values(movieData));
 
