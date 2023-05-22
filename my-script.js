@@ -91,5 +91,5 @@ function sortTable() {
     }
   }
 }
-console.log(Object.values(movieData));
+//console.log(Object.values(movieData));
 

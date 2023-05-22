@@ -61,6 +61,14 @@
             cell4.innerHTML = document.getElementById("year").value;
             cell5.innerHTML = document.getElementById("cast").value;
             cell6.innerHTML = document.getElementById("runtime").value;
+            movieData[document.getElementById("title").value] = {
+                rating: document.getElementById("rating").value,
+                runtime: Number(document.getElementById("runtime").value),
+                year: Number(document.getElementById("year").value),
+                plot: document.getElementById("plot").value,
+                cast: document.getElementById("cast").value.split(','),
+            };
+            console.log(movieData);
             ResetForm();
         }
     </script>
