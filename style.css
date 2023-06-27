@@ -9,3 +9,39 @@ th,
 td {
     padding: 10px;
 }
+
+h1 {
+    text-align: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 50px;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: auto;
+  }
+  .column {
+    width: 45%;
+  }
+
+.multi-line-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+.form-row {
+    display: flex;
+    align-self: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+  }
+  
+  .form-row input {
+    margin-left: 10px;
+  }

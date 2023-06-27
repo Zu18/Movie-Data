@@ -12,25 +12,43 @@
 
 <body>
     <h1>Movie Data</h1>
-    <p>Click the button to sort the table alphabetically, by name:</p>
-    <button onclick="sortTable()">Sort by name</button>
-
-    <h2>Add your movie </h2>
-    <form id="movie">
-        <label for="title">Title:</label><br>
-        <input type="text" id="title" name="title"><br>
-        <label for="plot">Plot:</label><br>
-        <input type="text" id="plot" name="plot"><br>
-        <label for="rating">Rating (between 1 and 10):</label><br>
-        <input type="text" id="rating" name="rating" min="1" max="10"><br>
-        <label for="year">Year:</label><br>
-        <input type="text" id="year" name="year"><br>
-        <label for="cast">Cast:</label><br>
-        <input type="text" id="cast" name="cast"><br>
-        <label for="runtime">Runtime:</label><br>
-        <input type="text" id="runtime" name="runtime"><br><br>
-        <input type="button" value="Submit" onClick="addData()">
-    </form>
+    <section class="row">
+        <div class="column">
+            <h2> Sort the movies. </h2>
+            <p>Click the button to sort the table alphabetically, by name:</p>
+            <button onclick="sortTable()">Sort by name</button>
+        </div>
+        <div class="column">
+            <h2>Add your movie </h2>
+            <form id="movie" class="multi-line-form">
+                <div class="form-row">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="form-row">
+                    <label for="plot">Plot:</label>
+                    <input type="text" id="plot" name="plot">
+                </div>
+                <div class="form-row">
+                    <label for="rating">Rating:</label>
+                    <input type="text" id="rating" name="rating" min="1" max="10">
+                </div>
+                <div class="form-row">
+                    <label for="year">Year:</label>
+                    <input type="text" id="year" name="year">
+                </div>
+                <div class="form-row">
+                    <label for="cast">Cast:</label>
+                    <input type="text" id="cast" name="cast">
+                </div>
+                <div class="form-row">
+                    <label for="runtime">Runtime:</label>
+                    <input type="text" id="runtime" name="runtime">
+                </div>
+                <input type="button" value="Submit" onClick="addData()">
+            </form>
+        </div>
+    </section>
     <table id="myTable">
         <tr>
             <th>Title</th>
