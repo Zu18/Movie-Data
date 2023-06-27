@@ -13,6 +13,11 @@ td {
 h1 {
     text-align: center;
 }
+
+section {
+    margin-bottom: 30px;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -21,10 +26,12 @@ h1 {
     flex-direction: row;
     align-items: flex-start;
     max-width: auto;
-  }
-  .column {
+}
+
+.column {
     width: 45%;
-  }
+    text-align: center;
+}
 
 .multi-line-form {
     display: flex;
@@ -36,12 +43,19 @@ h1 {
 
 .form-row {
     display: flex;
-    align-self: auto;
     margin-right: 10px;
     margin-bottom: 10px;
     width: 45%;
-  }
-  
-  .form-row input {
+}
+
+.form-row input {
     margin-left: 10px;
-  }
+}
+
+button {
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color:#EFEFEF;
+    padding: 15px 32px;
+}
