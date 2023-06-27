@@ -1,8 +1,5 @@
-table,
-th,
-td {
-    border: 1px solid black;
-    background-color: antiquewhite;
+table {
+    border:1px solid grey ;
 }
 
 th,
@@ -10,6 +7,14 @@ td {
     padding: 10px;
 }
 
+/* The CSS nth-child(odd) selector is used to target the odd rows of the table */
+tr:nth-child(odd) {
+    background-color: #EFEFEF;
+  }
+  
+  tr:nth-child(even) {
+    background-color: white;
+  }
 h1 {
     text-align: center;
 }
